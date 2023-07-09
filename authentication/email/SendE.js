@@ -11,7 +11,7 @@ const sendMails = async (process) => {
             pass: 'bydxwrppuohdaifz'
         }
     });
-    const token = JWT.sign({ email: process.email }, 'MoEhab', { expiresIn: 60 })
+    const token = JWT.sign({ email: process.email }, 'MoEhab', { expiresIn: 60*60 })
     const info = await transporter.sendMail({
         // sender address
         to: `${process.email}`, // list of receivers
